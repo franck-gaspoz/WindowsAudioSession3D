@@ -1,0 +1,20 @@
+﻿<Window x:Class="WindowsAudioSession3D.Components.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:wpfubehaviors="clr-namespace:WPFUtilities.Behaviors.Windows;assembly=WPFUtilities"
+        xmlns:commands="clr-namespace:WindowsAudioSession3D.Commands"
+        xmlns:local="clr-namespace:WindowsAudioSession3D"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="3D Windows Audio Session Api Bass.Net" 
+        Height="450" Width="800"
+     >
+    <Behaviors:Interaction.Behaviors>
+        <wpfubehaviors:WindowDisplayedDelegateCommandBehavior Command="{x:Static commands:Commands.Start}"/>
+    </Behaviors:Interaction.Behaviors>
+    <Grid>
+    </Grid>
+</Window>
