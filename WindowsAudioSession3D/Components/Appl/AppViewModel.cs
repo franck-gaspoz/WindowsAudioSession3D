@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel;
+using System.Linq;
 
 using Un4seen.BassWasapi;
 
@@ -51,6 +52,9 @@ namespace WindowsAudioSession3D.Components.Appl
         public AppViewModel()
         {
             new ListenableSoundDevices().DevicesList.ForEach(x => ListenableDevices.Add(x));
+            var soundDeviceId = Properties.Settings.Default.SoundDeviceId;
+            if (!string.IsNullOrWhiteSpace(soundDeviceId))
+                SelectedDevice = ListenableDevices.FirstOrDefault(x => x.id == soundDeviceId);
         }
 
     }
